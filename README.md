@@ -1,5 +1,14 @@
 # reserva3b
 
+ATENÇÃO!!!!!!!!!!
+baixe o FPDF: 
+Version: 1.86                                                                *
+Date:    2023-06-25                                                          *
+Author:  Olivier PLATHEY 
+-- mude o nome da pasta pra "FPDF" e adicione na pasta view!
+
+DATABASE:
+
 create database proj_reserva;
 
 create table usuarios(
@@ -11,23 +20,17 @@ create table usuarios(
 );
 
 insert into usuarios(id, tipo, credencial, email, senha) values(null, "admin", "admin", "sree3b2024@gmail.com", "boomer");
-insert into usuarios(id, tipo, credencial, email, senha) values(null, "funcionario", "tester", "luanamoreiraacc@gmail.com", "tester123");
-insert into usuarios(id, tipo, credencial, email, senha) values(null, "funcionario", "objecttester", “luanamoreiraacc@gmail.com", "objecttester123");
-insert into usuarios(id, tipo, credencial, email, senha) values(null, "funcionario", "tester3", "icarocerebroderretido@gmail.com", "tester3123");
-
+insert into usuarios(id, tipo, credencial, email, senha) values(null, "funcionario", "tester", “luanamoreiraacc@gmail.com”, "tester123");
 
 create table espaços(
 	id int primary key not null auto_increment,
-	nome varchar(150)
+	nome_esp varchar(150)
 );
 
 create table equipamentos(
 	id int primary key not null auto_increment,
-	nome varchar(150)
+	nome_eqp varchar(150)
 );
-
-insert into espaços(id, nome) values(null, "Biblioteca");
-insert into equipamentos(id, nome) values(null, "Datashow 0001");
 
 create table semana(
 	id int primary key not null auto_increment,
@@ -53,7 +56,7 @@ create table hora_fixo(
 create table hora_fixo_esp(
 	id int primary key not null auto_increment,
 	id_espaços int,
-	foreign key (id_espaços) references espaços(id),
+	foreign key (id_espaços) references espaços(id) on delete cascade,
 	id_hora_fixo int,
 	foreign key (id_hora_fixo) references hora_fixo(id)
 );
@@ -61,14 +64,10 @@ create table hora_fixo_esp(
 create table hora_fixo_equip(
 	id int primary key not null auto_increment,
 	id_equipamentos int,
-	foreign key (id_equipamentos) references equipamentos(id),
+	foreign key (id_equipamentos) references equipamentos(id) on delete cascade,
 	id_hora_fixo int,
 	foreign key (id_hora_fixo) references hora_fixo(id)
 );
-
-insert into hora_fixo(id, horario_inicio_fixo, horario_fim_fixo, id_semana) values(null, "07:30", "08:20", 2);
-insert into hora_fixo_esp(id, id_espaços, id_hora_fixo) values(null, 1, 1);
-insert into hora_fixo_equip(id, id_equipamentos, id_hora_fixo) values(null, 1, 1);
 
 create table hora_instavel(
 	id int primary key not null auto_increment,
@@ -77,12 +76,10 @@ create table hora_instavel(
 	data_instavel date
 );
 
-insert into hora_instavel(id, hora_instavel_inicio, hora_instavel_fim, data_instavel) values(null, "09:10", "12:00", “2024-05-30");
-
 create table reservas_esp(
 	id int primary key not null auto_increment,
 	id_espaços int,
-	foreign key (id_espaços) references espaços(id),
+	foreign key (id_espaços) references espaços(id) on delete cascade,
 	id_hora_instavel int,
 	foreign key (id_hora_instavel) references hora_instavel(id),
 	id_usuarios int,
@@ -94,7 +91,7 @@ create table reservas_esp(
 create table reservas_equip(
 	id int primary key not null auto_increment,
 	id_equipamentos int,
-	foreign key (id_equipamentos) references equipamentos(id),
+	foreign key (id_equipamentos) references equipamentos(id) on delete cascade,
 	id_hora_instavel int,
 	foreign key (id_hora_instavel) references hora_instavel(id),
 	id_usuarios int,
@@ -103,7 +100,16 @@ create table reservas_equip(
 	motivo varchar(100)
 );
 
+PARA TESTE:
+
+insert into espaços(id, nome) values(null, "Biblioteca");
+insert into equipamentos(id, nome) values(null, "Datashow 0001");
+
+insert into hora_fixo(id, horario_inicio_fixo, horario_fim_fixo, id_semana) values(null, "07:30", "08:20", 2);
+insert into hora_fixo_esp(id, id_espaços, id_hora_fixo) values(null, 1, 1);
+insert into hora_fixo_equip(id, id_equipamentos, id_hora_fixo) values(null, 1, 1);
+
+insert into hora_instavel(id, hora_instavel_inicio, hora_instavel_fim, data_instavel) values(null, "09:10", "12:00", “2024-05-30”);
+
 insert into reservas_esp(id, id_espaços, id_hora_instavel, id_usuarios, responsavel, motivo) values(null, 1, 1, 2, "Grêmio", "Reunião para lideranças");
 insert into reservas_equip(id, id_equipamentos, id_hora_instavel, id_usuarios, responsavel, motivo) values(null, 1, 1, 2, "Grêmio", "Reunião para lideranças");
-
-
