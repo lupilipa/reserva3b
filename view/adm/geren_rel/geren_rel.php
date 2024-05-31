@@ -71,7 +71,7 @@
                 <div class="item-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-website-theme-2 mobi-mbri" style="color: rgb(255, 225, 97); fill: rgb(255, 225, 97);"></span>
-                        <a href="" class="card-title align-center mbr-black mbr-fonts-style display-7">
+                        <a href="../../relatorios/relatorio_usuarios.php" class="card-title align-center mbr-black mbr-fonts-style display-7">
                             <h5><strong>Relatório de usuários</strong></h5></a>
                     </div>
                 </div>

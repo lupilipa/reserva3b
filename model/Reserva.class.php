@@ -10,11 +10,6 @@ class Reserva{
 
     }
 
-    public function relatorioReserva(){
-
-    }
-
-
 }
 
 ?>
