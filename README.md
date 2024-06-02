@@ -102,8 +102,8 @@ create table reservas_equip(
 
 PARA TESTE:
 
-insert into espaços(id, nome) values(null, "Biblioteca");
-insert into equipamentos(id, nome) values(null, "Datashow 0001");
+insert into espaços(id, nome_esp) values(null, "Biblioteca");
+insert into equipamentos(id, nome_eqp) values(null, "Datashow 0001");
 
 insert into hora_fixo(id, horario_inicio_fixo, horario_fim_fixo, id_semana) values(null, "07:30", "08:20", 2);
 insert into hora_fixo_esp(id, id_espaços, id_hora_fixo) values(null, 1, 1);
