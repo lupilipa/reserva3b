@@ -6,7 +6,7 @@ require_once("../../model/Reserva.class.php");
 $pdf = new  FPDF();
         $pdf->addPage();
         $pdf->setFont('arial','B', 12);
-        $pdf->Image("C:/xampp/htdocs/proj_reservas/view/assets/images/images.jpg", 10, 10, 45, 25, 'JPG');
+        $pdf->Image("C:/xampp2/htdocs/proj_reservas/view/assets/images/images.jpg", 10, 10, 45, 25, 'JPG');
         $pdf->cell(0, 10 , "          EEEP SALABERGA TORQUATO GOMES DE MATOS", 0 , 1, 'R');
         $pdf->cell(0, 10 , utf8_decode("EMI em Informática"), 0 , 0, 'R');
         $pdf->ln(15);

@@ -30,7 +30,7 @@
         <div class="container">
             <div class="navbar-brand">
                 <span class="navbar-caption-wrap">
-                    <a class="navbar-caption text-white text-primary display-7" href="../../index.php">
+                    <a class="navbar-caption text-white text-primary display-7" href="../../../control/controleBotoes.php?voltar_menu">
                         SREE - Sistema de Reservas</a></span>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

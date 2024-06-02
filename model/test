@@ -1,0 +1,93 @@
+public static function verificarHoraEx($hora_ins_ini, $hora_ins_fim, $data_ins){
+        $pdo = new PDO("mysql:host=localhost;dbname=proj_reserva", "root", "");
+        $consulta = "select * from hora_instavel where hora_ins_ini = :hora_ins_ini 
+        and hora_ins_fim = :hora_ins_fim and data_ins = :data_ins;";
+        $consultafeita = $pdo->prepare($consulta);
+        $consultafeita->bindValue(":hora_ins_ini", $hora_ins_ini);
+        $consultafeita->bindValue(":hora_ins_fim", $hora_ins_fim);
+        $consultafeita->bindValue(":data_ins", $data_ins);
+        $consultafeita->execute();
+        $resultado = $consultafeita->fetchAll(PDO::FETCH_ASSOC);
+        return $resultado;
+
+    }
+
+    public static function verificarDispon($id_espaços, $id_hora_instavel, $hora_ins_ini, $hora_ins_fim, $data_ins){
+        $pdo = new PDO("mysql:host=localhost;dbname=proj_reserva", "root", "");
+        $resultado = self::verificarHoraEx($hora_ins_ini, $hora_ins_fim, $data_ins);
+        if ($resultado) {
+            $id_hora_instavel = $resultado[0]['id'];
+
+            $consulta2 = "select * from reservas_esp where id_espaços = :id_espaços and id_hora_instavel = :id_hora_instavel";
+            $consultafeita2 = $pdo->prepare($consulta2);
+            $consultafeita2->bindValue(":id_espaços", $id_espaços);
+            $consultafeita2->bindValue(":id_hora_instavel", $id_hora_instavel);
+            $consultafeita2->execute();
+            $y = $consultafeita2->rowCount();
+            if ($y == 0) {
+                return true;
+            }else{
+                header('location:../view/reserva/reg_reserva_indis.php');
+            }
+        }else{
+            return false;
+        }
+    }
+
+    public static function cadastrarReservaHoraD($hora_ins_ini, $hora_ins_fim, $data_ins, $id_espaços, $responsavel, $motivo){
+        $pdo = new PDO("mysql:host=localhost;dbname=proj_reserva", "root", "");
+        $resultado = self::verificarHoraEx($hora_ins_ini, $hora_ins_fim, $data_ins);
+        if ($resultado) {
+            $id_hora_instavel = $resultado[0]['id'];
+
+            $consulta2 = "insert into reservas_esp values(null, :id_espaços, :id_hora_instavel, 
+            null, :responsavel, :motivo);";
+            $consultafeita2 = $pdo->prepare($consulta2);
+            $consultafeita2->bindValue(":id_espaços", $id_espaços);
+            $consultafeita2->bindValue(":id_hora_instavel", $id_hora_instavel);
+            $consultafeita2->bindValue(":responsavel", $responsavel);
+            $consultafeita2->bindValue(":motivo", $motivo);
+            $consultafeita2->execute();
+            $resultado2 = $consultafeita2->fetch(PDO::FETCH_ASSOC);
+            if ($resultado2) {
+                header('location:../view/adm/cad_conf.php');
+            }else{
+                header('location:../view/reserva/reg_reserva_indis.php');
+            }
+        }else{
+            header('location:../view/reserva/reg_reserva_error.php');
+        }
+    }
+
+    public static function cadastrarReservaHoraI($hora_ins_ini, $hora_ins_fim, $data_ins, $id_espaços, $responsavel, $motivo){
+        $pdo = new PDO("mysql:host=localhost;dbname=proj_reserva", "root", "");
+        $consulta = "INSERT INTO hora_instavel VALUES(null, :hora_ins_ini, :hora_ins_fim, :data_ins);";
+        $consultafeita = $pdo->prepare($consulta);
+        $consultafeita->bindValue(":hora_ins_ini", $hora_ins_ini);
+        $consultafeita->bindValue(":hora_ins_fim", $hora_ins_fim);
+        $consultafeita->bindValue(":data_ins", $data_ins);
+        $consultafeita->execute();
+        $resultado = self::verificarHoraEx($hora_ins_ini, $hora_ins_fim, $data_ins);
+        if ($resultado) {
+            $id_hora_instavel = $resultado[0]['id'];
+            $consulta2 = "INSERT INTO reservas_esp VALUES(null, :id_espaços, :id_hora_instavel, null, :responsavel, :motivo);";
+            $consultafeita2 = $pdo->prepare($consulta2);
+            $consultafeita2->bindValue(":id_espaços", $id_espaços);
+            $consultafeita2->bindValue(":id_hora_instavel", $id_hora_instavel);
+            $consultafeita2->bindValue(":responsavel", $responsavel);
+            $consultafeita2->bindValue(":motivo", $motivo);
+            $consultafeita2->execute();
+            $resultado2 = $consultafeita2->fetch(PDO::FETCH_ASSOC);
+            if ($resultado2) {
+                header('location:../view/adm/cad_conf.php');
+            } else {
+                header('location:../view/reserva/reg_reserva_indis.php');
+            }
+        } else {
+            header('location:../view/reserva/reg_reserva_error.php');
+        }
+    }
+
+}
+
+?>

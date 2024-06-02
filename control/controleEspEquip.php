@@ -1,5 +1,7 @@
 <?php
 
+require('../model/Reserva.class.php');
+require('../model/Usuario.class.php');
 require('../model/EspEquip.class.php');
 
 if(isset($_POST['cadastrar_esp'])){

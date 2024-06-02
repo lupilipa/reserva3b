@@ -13,6 +13,7 @@ class Usuario{
         if($x>0){
             session_start();
             foreach($consultafeita as $value){
+            $_SESSION['id'] = $value['id'];
             $_SESSION['tipo'] = $value['tipo'];
             }
             header('location:../control/controleLogin.php?opc=1');
