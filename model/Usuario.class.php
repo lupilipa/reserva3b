@@ -66,10 +66,6 @@ class Usuario{
           
     }
 
-    public function relatorioUsuario(){
-
-    }
-
 }
 
 ?>

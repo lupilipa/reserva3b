@@ -61,7 +61,7 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
+                <form action="../control/controleReserva.php" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
                     <input type="hidden" name="email" data-form-email="true" value="PRgM24VNnKLztS3HoBf+lsD4htUxP/XvgkExwo1VunuSruEiQkwIl11IR3xoTOtxOMZQCRcYXAPGM49T2x7jvMAUlDaRKMwOwjz3Fn0eWN4EJACKwiXaBdIXoMeizdmD">
                     <p class="mbr-text mbr-fonts-style align-center mb-4 display-7">
                         Qual o intervalo de data?</p>
@@ -70,7 +70,8 @@
                             <input type="text" name="name" placeholder="Primeira data" data-form-field="name" class="form-control" value="" id="name-form7-2g">
                         </div>
                         <div class="col-auto mbr-section-btn align-center">
-                            <button type="submit" class="btn btn-warning display-4">Gerar relatório</button>
+                            <button type="submit" class="btn btn-warning display-4" name="gerar_rel">
+                                Gerar relatório</button>
                         </div>
                     </div>
                 </form>

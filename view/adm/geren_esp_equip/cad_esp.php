@@ -61,7 +61,7 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
+                <form action="../../../control/controleEspEquip.php" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
                     <input type="hidden" name="email" data-form-email="true" value="UWJ5hPrx4RvAFNvJLWTr+cVndkBbSx/dvgaPVlC/9PFJvYgG0aY+314i38a6KTFmqP5r8bWYTDW4PwEhLftMIx3iTl6bEunigjysH7NqX518DhkLbTLxF5ZYuezhQs8I">
                     <p class="mbr-text mbr-fonts-style align-center mb-4 display-7">
                         Informe o nome do espaço, e, se houver, o dia e os horários fixos.</p>
@@ -70,7 +70,7 @@
                             <input type="text" name="name_esp" placeholder="Informe o nome do espaço" data-form-field="name" class="form-control" value="" id="name-form7-1a">
                         </div>
                         <div class="col-auto mbr-section-btn align-center">
-                            <button type="submit" class="btn btn-warning display-4">
+                            <button type="submit" class="btn btn-warning display-4" name="cadastrar_esp">
                                 Cadastrar</button>
                         </div>
                     </div>

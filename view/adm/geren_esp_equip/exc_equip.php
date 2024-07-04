@@ -61,17 +61,20 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
-                    <input type="hidden" name="email" data-form-email="true" value="ITto8BoYnq5WetJYasvyp3zTieEdlVSoBVr9QnsZxqNIv7TUEDsjfouj2NH2bSXtjhJis/bXjYtu2TnWXSM5uZo7cMNkSi7md0QBPY2KrNAHy8MgYIwwO/kNzMUFZFF9">
+                <form action="../../../control/controleEspEquip.php" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
+                    <input type="hidden" name="email" data-form-email="true" value="UWJ5hPrx4RvAFNvJLWTr+cVndkBbSx/dvgaPVlC/9PFJvYgG0aY+314i38a6KTFmqP5r8bWYTDW4PwEhLftMIx3iTl6bEunigjysH7NqX518DhkLbTLxF5ZYuezhQs8I">
                     <p class="mbr-text mbr-fonts-style align-center mb-4 display-7">
-                        Informe o código de cadastro do equipamento (disponível 
-                        no relatório de espaços/equipamentos) e a sua senha de admin.</p>
+                        Informe o código de cadastro do equipamento (disponível no relatório de equipamentos) 
+                        e a sua senha de admin.</p>
                     <div class="dragArea row">
                         <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
-                            <input type="text" name="name" placeholder="Informe o código de cadastro" data-form-field="name" class="form-control" value="" id="name-form7-3c">
+                            <input type="text" name="cod_cad" placeholder="Informe o código de cadastro" data-form-field="name" class="form-control" value="" id="name-form7-1a">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="password" name="senha_adm" placeholder="Insira a senha do admin" data-form-field="name" class="form-control" value="" id="name-form7-2y">
                         </div>
                         <div class="col-auto mbr-section-btn align-center">
-                            <button type="submit" class="btn btn-warning display-4">
+                            <button type="submit" class="btn btn-warning display-4" name="excluir_eqp">
                                 Excluir</button>
                         </div>
                     </div>

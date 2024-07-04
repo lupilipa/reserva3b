@@ -71,7 +71,7 @@
                 <div class="item-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-website-theme-2 mobi-mbri" style="color: rgb(255, 225, 97); fill: rgb(255, 225, 97);"></span>
-                        <a href="" class="card-title align-center mbr-black mbr-fonts-style display-7">
+                        <a href="relatorios/relatorio_esp.php" class="card-title align-center mbr-black mbr-fonts-style display-7">
                             <h5><strong>Relatório apenas de espaços</strong></h5></a>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                 <div class="item-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-credit-card mobi-mbri" style="color: rgb(255, 225, 97); fill: rgb(255, 225, 97);"></span>
-                        <a href="" class="card-title align-center mbr-black mbr-fonts-style display-7">
+                        <a href="relatorios/relatorio_equip.php" class="card-title align-center mbr-black mbr-fonts-style display-7">
                             <h5><strong>Relatório apenas de equipamentos</strong></h5></a>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                 <div class="item-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-devices mobi-mbri" style="color: rgb(255, 225, 97); fill: rgb(255, 225, 97);"></span>
-                        <a href="" class="card-title align-center mbr-black mbr-fonts-style display-7">
+                        <a href="relatorios/relatorio_espeqp.php" class="card-title align-center mbr-black mbr-fonts-style display-7">
                             <h5><strong>Relatório de espaços e equipamentos</strong></h5></a>
                     </div>
                 </div>
