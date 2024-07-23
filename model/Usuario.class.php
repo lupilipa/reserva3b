@@ -14,6 +14,7 @@ class Usuario{
             session_start();
             foreach($consultafeita as $value){
             $_SESSION['tipo'] = $value['tipo'];
+            $_SESSION['id_user'] = $value['id'];
             }
             header('location:../control/controleLogin.php?opc=1');
         }else{

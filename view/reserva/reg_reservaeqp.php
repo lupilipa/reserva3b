@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="../assets/images/logoo.webp" type="image/x-icon">
   <meta name="description" content="">
   
-  <title>Menu</title>
+  <title>Registrar Reserva</title>
   <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-reboot.min.css">
@@ -53,39 +53,43 @@
     </nav>
 </section>
 
-<section data-bs-version="5.1" class="content4 cid-ue8SjXKjo8" id="content4-1n">
+<section data-bs-version="5.1" class="form7 cid-ue8ZiuaGTf" id="form7-28">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="title col-md-12 col-lg-10">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">
-                    <strong>Olá!</strong></h3>
-                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">
-                    O que você quer fazer hoje?</h4>
-            </div>
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Registre uma reserva.</strong></h3>
         </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="features1 cid-ue8SjYMzjX" id="features2-1o">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="item features-without-image mb-4 col-12 col-md-3 active">
-                <div class="item-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-credit-card mobi-mbri" style="color: rgb(255, 225, 97); fill: rgb(255, 225, 97);"></span>
-                        <a href="../reserva/menu_reserva.php" class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <h5><strong>Registrar reserva</strong></h5></a>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="../../control/controleReserva.php" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
+                    <input type="hidden" name="email" data-form-email="true" value="yq91Xn38F2jh2aJmrpr8LbpSsJmsSFDpBdXnoRN5BcQPj3L/8N7Yoh4UYyMdTUW/c9r/E+PYOLr5u1FyTjUQdDV8mxqNU9j01MZnKQvgooQxYefO0SYda0tPQpe0BvLF">
+                    <p class="mbr-text mbr-fonts-style align-center mb-4 display-7">
+                        Informe as características da reserva abaixo:</p>
+                    <div class="dragArea row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Selecione o nome do que você quer" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="responsavel" placeholder="Quem é o responsável pela reserva?" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Selecione o nome do que você quer" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Selecione o nome do que você quer" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Selecione o nome do que você quer" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Selecione o nome do que você quer" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-auto mbr-section-btn align-center">
+                            <button type="submit" class="btn btn-warning display-4" name="reg_reserva">
+                                Verificar disponibilidade</button>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="item features-without-image mb-4 col-12 col-md-3">
-                <div class="item-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-devices mobi-mbri" style="color: rgb(255, 225, 97); fill: rgb(255, 225, 97);"></span>
-                        <a href="../filtros_rel.php" class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <h5><strong>Relatório de reservas</strong></h5></a>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

@@ -61,16 +61,30 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
-                    <input type="hidden" name="email" data-form-email="true" value="yq91Xn38F2jh2aJmrpr8LbpSsJmsSFDpBdXnoRN5BcQPj3L/8N7Yoh4UYyMdTUW/c9r/E+PYOLr5u1FyTjUQdDV8mxqNU9j01MZnKQvgooQxYefO0SYda0tPQpe0BvLF">
+                <form action="../../control/controleReserva.php" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
                     <p class="mbr-text mbr-fonts-style align-center mb-4 display-7">
                         Informe as características da reserva abaixo:</p>
                     <div class="dragArea row">
                         <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
-                            <input type="text" name="name" placeholder="Selecione o nome do que você quer" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                            <input type="text" name="id_espaços" placeholder="Qual o código de cadastro do espaço?" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="responsavel" placeholder="Quem é o responsável pela reserva?" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="motivo" placeholder="Qual o motivo da reserva?" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="date" name="data_instavel" placeholder="Selecione o dia da reserva" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="time" name="hora_instavel_inicio" placeholder="Selecione o horário inicial" data-form-field="name" class="form-control" value="" id="name-form7-28">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="time" name="hora_instavel_fim" placeholder="Selecione o horário final" data-form-field="name" class="form-control" value="" id="name-form7-28">
                         </div>
                         <div class="col-auto mbr-section-btn align-center">
-                            <button type="submit" class="btn btn-warning display-4">
+                            <button type="submit" class="btn btn-warning display-4" name="reg_reservaesp">
                                 Verificar disponibilidade</button>
                         </div>
                     </div>
